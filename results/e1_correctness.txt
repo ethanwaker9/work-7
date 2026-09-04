@@ -1,0 +1,1 @@
+60 random instances, all three methods agree: True

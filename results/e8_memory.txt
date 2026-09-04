@@ -1,0 +1,4 @@
+{'split': 4, 'blocks': 1, 'cells': 1048576, 'peak': 4092697, 'hits': 336030, 'time': 7.994668917031959}
+{'split': 3, 'blocks': 32, 'cells': 32768, 'peak': 317623, 'hits': 336030, 'time': 7.953273124992847}
+{'split': 2, 'blocks': 1024, 'cells': 1024, 'peak': 279855, 'hits': 336030, 'time': 11.701338332961313}
+{'split': 0, 'blocks': 0, 'cells': 0, 'peak': 328, 'hits': 0, 'time': 0.0}

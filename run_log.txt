@@ -1,0 +1,126 @@
+[E1] cross-validation of the three counting methods
+     60 random instances, all three methods agree: True
+[E2] time and space comparison for exact counting
+     k=2 L=100: enum=0.004s  mark=0.001s  fiber=0.001s  N=3222
+     k=2 L=300: enum=0.037s  mark=0.008s  fiber=0.005s  N=29068
+     k=2 L=1000: enum=0.455s  mark=0.099s  fiber=0.020s  N=322760
+     k=2 L=3000: enum=4.189s  mark=0.897s  fiber=0.078s  N=2904028
+     k=2 L=10000: enum=--  mark=--  fiber=0.336s  N=32262444
+     k=2 L=30000: enum=--  mark=--  fiber=1.162s  N=290372748
+     k=2 L=100000: enum=--  mark=--  fiber=4.810s  N=3226342152
+     k=3 L=30: enum=0.014s  mark=0.002s  fiber=0.000s  N=18271
+     k=3 L=100: enum=0.512s  mark=0.061s  fiber=0.002s  N=677563
+     k=3 L=300: enum=--  mark=1.640s  fiber=0.007s  N=18278770
+     k=3 L=1000: enum=--  mark=--  fiber=0.028s  N=677050414
+     k=3 L=10000: enum=--  mark=--  fiber=0.443s  N=676901654248
+     k=3 L=100000: enum=--  mark=--  fiber=6.486s  N=676893777699800
+     k=3 L=1000000: enum=--  mark=--  fiber=87.344s  N=676892808420684921
+     k=4 L=20: enum=0.095s  mark=0.008s  fiber=0.000s  N=136313
+     k=4 L=50: enum=3.690s  mark=0.320s  fiber=0.001s  N=5316649
+     k=4 L=200: enum=--  mark=--  fiber=0.005s  N=1359987176
+     k=4 L=1000: enum=--  mark=--  fiber=0.037s  N=849766428782
+     k=4 L=10000: enum=--  mark=--  fiber=0.582s  N=8497351713077420
+     k=4 L=100000: enum=--  mark=--  fiber=8.099s  N=84973325594387191920
+     mem k=2 L=2000: marking=4155289 B  fiber=532512 B
+     mem k=3 L=120: marking=1732393 B  fiber=106416 B
+     mem k=3 L=100000: marking=None B  fiber=628700 B
+     mem k=4 L=40: marking=2564689 B  fiber=46296 B
+[E3] Schnirelmann density scans and deficit certificates
+     V2: min ratio at L=1276: 0.607877158 (density in [0.607921510,0.607927590]), first deficit at L=820, N(Lmin)=989731
+     V3: min ratio at L=169170: 0.831907366 (density in [0.831907373,0.831907373]), first deficit at L=122760, N(Lmin)=4027587810395107
+     S=[(1, 0), (0, 1)]: min ratio 0.306122449 = 15/49 at L=7 (N=15), density in [0.322628164,0.322634617], first deficit L=7, deficits<= 600: 160
+     S=[(0, 0), (1, 0), (0, 1)]: min ratio 0.062500000 = 1/16 at L=4 (N=1), density in [0.125483518,0.125487283], first deficit L=3, deficits<= 1200: 1097
+[E3b] certified Schnirelmann densities
+     S=[(1, 2, 1)] k=3: SD = 274/343 = 0.798833819 at L=7, delta in [0.831907373,0.831907373], certified by scan to L1=289 with (z,t)=(40,1), first deficit L=4, deficits: 396
+     S=[(2, 1, 1), (1, 2, 1)] k=3: SD = 211/343 = 0.615160350 at L=7, delta in [0.676892737,0.676892737], certified by scan to L1=288 with (z,t)=(40,1), first deficit L=4, deficits: 396
+     S=[(1, 2, 1), (2, 1, 2)] k=3: SD = 83/128 = 0.648437500 at L=8, delta in [0.676892737,0.676892737], certified by scan to L1=576 with (z,t)=(80,1), first deficit L=5, deficits: 572
+     S=[(1, 2, 3), (3, 2, 1)] k=3: SD = 225/289 = 0.778546713 at L=17, delta in [0.789708193,0.789708193], certified by scan to L1=1296 with (z,t)=(160,1), first deficit L=7, deficits: 1157
+     S=[(1, 0, 0), (0, 1, 0)] k=3: SD = 43/64 = 0.671875000 at L=16, delta in [0.676892737,0.676892737], certified by scan to L1=3249 with (z,t)=(80,2), first deficit L=6, deficits: 553
+     S=[(1, 2, 1, 1)] k=4: SD = 556/625 = 0.889600000 at L=5, delta in [0.923938403,0.923938403], certified by scan to L1=161 with (z,t)=(40,1), first deficit L=3, deficits: 197
+     S=[(1, 2, 3, 1)] k=4: SD = 73/81 = 0.901234568 at L=3, delta in [0.923938403,0.923938403], certified by scan to L1=233 with (z,t)=(40,1), first deficit L=3, deficits: 230
+     S=[(0, 0, 0, 0), (1, 2, 1, 1)] k=4: SD = 55541/65536 = 0.847488403 at L=16, delta in [0.849732991,0.849732991], certified by scan to L1=2565 with (z,t)=(160,2), first deficit L=4, deficits: 544
+        candidate L=62700: N=131766457148378, N-lo*L^3=+62276822.2 (no deficit)
+        candidate L=97020: N=488186775149881, N-lo*L^3=+177760665.1 (no deficit)
+        candidate L=36960: N=26989719608584, N-lo*L^3=+27581451.0 (no deficit)
+[E4] criterion values B_u
+     origin & +0.000 & -0.504 & -0.259 & -0.429 & -0.184 & -0.568 & -0.072 & -0.515
+     mixed singleton & -1.216 & -1.720 & -1.474 & -1.645 & -1.400 & -1.784 & -1.288 & -1.731
+     two positive & -1.824 & -1.836 & -2.025 & -1.964 & -2.062 & -2.081 & -1.899 & -2.001
+     chain & +0.000 & +0.127 & +0.158 & +0.092 & -0.030 & -0.033 & -0.076 & -0.079
+     nonpositive & +0.000 & -0.408 & -0.335 & -0.497 & -0.320 & -0.662 & -0.101 & -0.594
+     axis pattern & +0.000 & -2.505 & -1.890 & -1.821 & -1.576 & -2.758 & -0.763 & -2.364
+[E5] validation of the sieve algorithms against exhaustive search
+     228 random instances in dimensions 2 to 5; line, plane and fibered sieves agree with exhaustive search on all of them: True
+     transition sieve recall on the same instances: 130749/131157 = 0.9969
+[E6] running time, work and completeness against the level
+     t=3 r=7       level=0 pts=149797.2  line=0.024 plane=0.133 ntv=0.282 fib=0.028  recall=1.000
+     t=3 r=61      level=0 pts=17191.0  line=0.004 plane=0.017 ntv=0.064 fib=0.006  recall=0.872
+     t=3 r=509     level=1 pts=2061.5  line=0.002 plane=0.002 ntv=0.009 fib=0.002  recall=0.516
+     t=3 r=4001    level=1 pts=263.0  line=0.002 plane=0.001 ntv=0.003 fib=0.001  recall=0.832
+     t=3 r=32003   level=2 pts=37.8  line=0.002 plane=0.000 ntv=0.001 fib=0.000  recall=0.715
+     t=3 r=250007  level=2 pts=4.0  line=0.002 plane=0.000 ntv=0.000 fib=0.000  recall=1.000
+     t=3 r=1000003 level=2 pts=2.0  line=0.002 plane=0.000 ntv=0.000 fib=0.000  recall=1.000
+     t=4 r=7       level=0 pts=182857.2  line=0.038 plane=0.175 ntv=0.560 fib=0.046  recall=1.000
+     t=4 r=61      level=1 pts=20981.2  line=0.012 plane=0.025 ntv=0.128 fib=0.026  recall=0.677
+     t=4 r=509     level=1 pts=2516.8  line=0.008 plane=0.007 ntv=0.041 fib=0.007  recall=0.947
+     t=4 r=4001    level=2 pts=318.0  line=0.008 plane=0.004 ntv=0.013 fib=0.001  recall=0.997
+     t=4 r=32003   level=2 pts=40.8  line=0.008 plane=0.041 ntv=0.004 fib=0.000  recall=0.994
+     t=4 r=250007  level=3 pts=4.8  line=0.008 plane=0.003 ntv=0.002 fib=0.000  recall=1.000
+     t=4 r=1000003 level=3 pts=2.5  line=0.008 plane=0.003 ntv=0.002 fib=0.000  recall=1.000
+     t=5 r=7       level=0 pts=228571.0  line=0.060 plane=0.244 ntv=1.251 fib=0.076  recall=1.000
+     t=5 r=61      level=1 pts=26239.2  line=0.026 plane=0.043 ntv=0.353 fib=0.045  recall=0.945
+     t=5 r=509     level=2 pts=3149.0  line=0.023 plane=0.020 ntv=0.132 fib=0.008  recall=0.988
+     t=5 r=4001    level=2 pts=398.8  line=0.022 plane=0.015 ntv=0.041 fib=0.002  recall=0.961
+     t=5 r=32003   level=3 pts=48.8  line=0.024 plane=0.015 ntv=0.015 fib=0.000  recall=0.964
+     t=5 r=250007  level=4 pts=8.8  line=0.023 plane=0.014 ntv=0.008 fib=0.000  recall=1.000
+     t=5 r=1000003 level=4 pts=2.0  line=0.023 plane=0.014 ntv=0.007 fib=0.000  recall=1.000
+     t=6 r=7       level=0 pts=213285.0  line=0.072 plane=0.253 ntv=2.254 fib=0.098  recall=1.000
+     t=6 r=61      level=1 pts=24453.5  line=0.039 plane=0.073 ntv=0.951 fib=0.077  recall=1.000
+     t=6 r=509     level=2 pts=2933.0  line=0.040 plane=0.042 ntv=0.357 fib=0.012  recall=0.999
+     t=6 r=4001    level=3 pts=369.2  line=0.041 plane=0.037 ntv=0.116 fib=0.003  recall=0.791
+     t=6 r=32003   level=4 pts=46.5  line=0.041 plane=0.035 ntv=0.053 fib=0.001  recall=1.000
+     t=6 r=250007  level=5 pts=6.2  line=0.040 plane=0.057 ntv=0.039 fib=0.000  recall=1.000
+     t=6 r=1000003 level=5 pts=2.5  line=0.041 plane=0.034 ntv=0.038 fib=0.000  recall=1.000
+[E7] output sensitivity and scaling in the region size
+     side=8 vol=32768 pts=2.3 slices=1.0 expected=1.0 line=0.000 plane=0.000 fib=0.000
+     side=12 vol=165888 pts=5.7 slices=1.0 expected=5.2 line=0.002 plane=0.001 fib=0.000
+     side=16 vol=524288 pts=17.7 slices=16.0 expected=16.4 line=0.004 plane=0.002 fib=0.000
+     side=24 vol=2654208 pts=86.0 slices=24.0 expected=82.9 line=0.014 plane=0.004 fib=0.000
+     side=32 vol=8388608 pts=261.7 slices=32.0 expected=262.1 line=0.032 plane=0.008 fib=0.001
+[E8] working memory of the relation collection
+     split=4 blocks=1 cells=1048576 peak=4092697 time=7.99s
+     split=3 blocks=32 cells=32768 peak=317623 time=7.95s
+     split=2 blocks=1024 cells=1024 peak=279855 time=11.70s
+     enumeration alone: peak=328
+[E9] duplicate-free yield of a sieve region
+     S=[(1, 2, 1)]: prediction 0.8319074, certified worst case 0.7988338 at L=7, relative shortfall 0.0398
+     S=[(2, 1, 1), (1, 2, 1)]: prediction 0.6768927, certified worst case 0.6151603 at L=7, relative shortfall 0.0912
+     S=[(1, 2, 1), (2, 1, 2)]: prediction 0.6768927, certified worst case 0.6484375 at L=8, relative shortfall 0.0420
+     S=[(1, 2, 3), (3, 2, 1)]: prediction 0.7897082, certified worst case 0.7785467 at L=17, relative shortfall 0.0141
+     S=[(1, 0, 0), (0, 1, 0)]: prediction 0.6768927, certified worst case 0.6718750 at L=16, relative shortfall 0.0074
+     S=[(1, 2, 1, 1)]: prediction 0.9239384, certified worst case 0.8896000 at L=5, relative shortfall 0.0372
+     S=[(1, 2, 3, 1)]: prediction 0.9239384, certified worst case 0.9012346 at L=3, relative shortfall 0.0246
+     S=[(0, 0, 0, 0), (1, 2, 1, 1)]: prediction 0.8497330, certified worst case 0.8474884 at L=16, relative shortfall 0.0026
+[E9b] multi-centre admissible counts
+     S=[(0, 0, 0), (1, 2, 1)] L=200: N=5419764 ratio=0.677470 delta=0.676893  fiber=0.004s enum=4.362s speedup=1034
+     S=[(0, 0, 0), (1, 2, 1), (2, 1, 2)] L=200: N=4274737 ratio=0.534342 delta=0.534567  fiber=0.012s enum=6.094s speedup=505
+     S=[(0, 0, 0, 0), (1, 2, 1, 1)] L=60: N=11012497 ratio=0.849730 delta=0.849733  fiber=0.001s enum=9.051s speedup=7089
+[E10] enumeration nodes per reported point and the shape hypothesis
+     t=3 r=32003    level=2 nodes/|H|r^-1 = 3.26 (bound 42) shape hypothesis 6/6, worst ratio 0.464
+     t=3 r=250007   level=2 nodes/|H|r^-1 = 4.61 (bound 42) shape hypothesis 5/6, worst ratio 1.097
+     t=3 r=1000003  level=2 nodes/|H|r^-1 = 7.15 (bound 42) shape hypothesis 5/6, worst ratio 1.024
+     t=4 r=4001     level=2 nodes/|H|r^-1 = 3.76 (bound 42) shape hypothesis 6/6, worst ratio 0.484
+     t=4 r=32003    level=2 nodes/|H|r^-1 = 5.16 (bound 42) shape hypothesis 5/6, worst ratio 1.247
+     t=4 r=250007   level=3 nodes/|H|r^-1 = 8.14 (bound 256) shape hypothesis 6/6, worst ratio 0.809
+     t=4 r=1000003  level=3 nodes/|H|r^-1 = 13.28 (bound 256) shape hypothesis 5/6, worst ratio 1.222
+     t=5 r=509      level=2 nodes/|H|r^-1 = 3.57 (bound 42) shape hypothesis 6/6, worst ratio 0.765
+     t=5 r=4001     level=2 nodes/|H|r^-1 = 4.74 (bound 42) shape hypothesis 4/6, worst ratio 2.304
+     t=5 r=32003    level=3 nodes/|H|r^-1 = 8.72 (bound 256) shape hypothesis 6/6, worst ratio 0.764
+     t=5 r=250007   level=4 nodes/|H|r^-1 = 16.90 (bound 1789) shape hypothesis 6/6, worst ratio 0.401
+     t=5 r=1000003  level=4 nodes/|H|r^-1 = 24.17 (bound 1789) shape hypothesis 6/6, worst ratio 0.878
+     t=6 r=509      level=2 nodes/|H|r^-1 = 4.81 (bound 42) shape hypothesis 6/6, worst ratio 0.681
+     t=6 r=4001     level=3 nodes/|H|r^-1 = 9.18 (bound 256) shape hypothesis 6/6, worst ratio 0.434
+     t=6 r=32003    level=4 nodes/|H|r^-1 = 15.09 (bound 1789) shape hypothesis 6/6, worst ratio 0.485
+     t=6 r=250007   level=5 nodes/|H|r^-1 = 33.88 (bound 13824) shape hypothesis 6/6, worst ratio 0.404
+     t=6 r=1000003  level=5 nodes/|H|r^-1 = 48.90 (bound 13824) shape hypothesis 6/6, worst ratio 0.798
+total 865.8s; tables in results/, figures in figures/

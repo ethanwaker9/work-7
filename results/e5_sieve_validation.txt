@@ -1,0 +1,2 @@
+228 random instances in dimensions 2 to 5; line, plane and fibered sieves agree with exhaustive search on all of them: True
+transition sieve recall on the same instances: 130749/131157 = 0.9969

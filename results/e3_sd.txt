@@ -1,0 +1,16 @@
+V2: min ratio at L=1276: 0.607877158 (density in [0.607921510,0.607927590]), first deficit at L=820, N(Lmin)=989731
+V3: min ratio at L=169170: 0.831907366 (density in [0.831907373,0.831907373]), first deficit at L=122760, N(Lmin)=4027587810395107
+S=[(1, 0), (0, 1)]: min ratio 0.306122449 = 15/49 at L=7 (N=15), density in [0.322628164,0.322634617], first deficit L=7, deficits<= 600: 160
+S=[(0, 0), (1, 0), (0, 1)]: min ratio 0.062500000 = 1/16 at L=4 (N=1), density in [0.125483518,0.125487283], first deficit L=3, deficits<= 1200: 1097
+S=[(1, 2, 1)] k=3: SD = 274/343 = 0.798833819 at L=7, delta in [0.831907373,0.831907373], certified by scan to L1=289 with (z,t)=(40,1), first deficit L=4, deficits: 396
+S=[(2, 1, 1), (1, 2, 1)] k=3: SD = 211/343 = 0.615160350 at L=7, delta in [0.676892737,0.676892737], certified by scan to L1=288 with (z,t)=(40,1), first deficit L=4, deficits: 396
+S=[(1, 2, 1), (2, 1, 2)] k=3: SD = 83/128 = 0.648437500 at L=8, delta in [0.676892737,0.676892737], certified by scan to L1=576 with (z,t)=(80,1), first deficit L=5, deficits: 572
+S=[(1, 2, 3), (3, 2, 1)] k=3: SD = 225/289 = 0.778546713 at L=17, delta in [0.789708193,0.789708193], certified by scan to L1=1296 with (z,t)=(160,1), first deficit L=7, deficits: 1157
+S=[(1, 0, 0), (0, 1, 0)] k=3: SD = 43/64 = 0.671875000 at L=16, delta in [0.676892737,0.676892737], certified by scan to L1=3249 with (z,t)=(80,2), first deficit L=6, deficits: 553
+S=[(1, 2, 1, 1)] k=4: SD = 556/625 = 0.889600000 at L=5, delta in [0.923938403,0.923938403], certified by scan to L1=161 with (z,t)=(40,1), first deficit L=3, deficits: 197
+S=[(1, 2, 3, 1)] k=4: SD = 73/81 = 0.901234568 at L=3, delta in [0.923938403,0.923938403], certified by scan to L1=233 with (z,t)=(40,1), first deficit L=3, deficits: 230
+S=[(0, 0, 0, 0), (1, 2, 1, 1)] k=4: SD = 55541/65536 = 0.847488403 at L=16, delta in [0.849732991,0.849732991], certified by scan to L1=2565 with (z,t)=(160,2), first deficit L=4, deficits: 544
+S_hard=[(0, 0, 0), (-1, -1, -1), (-2, 0, -1)]: density in [0.534566872,0.534566872], min truncated G on [100,100000] = +0.01486
+   candidate L=62700: N=131766457148378, N-lo*L^3=+62276822.2 (no deficit)
+   candidate L=97020: N=488186775149881, N-lo*L^3=+177760665.1 (no deficit)
+   candidate L=36960: N=26989719608584, N-lo*L^3=+27581451.0 (no deficit)
