@@ -9,6 +9,35 @@ This repository contains our implementation of research in precise relation coll
   are simultaneously visible from a finite set of reference points, that is
   the admissible or duplicate-free candidates of a sieve region.
 
+
+## Usage and Running
+The runtime of pipeline takes about fifteen minutes on one core laptop. The requirements are Python 3.9 or newer, `numpy` and `matplotlib` (needed only by `experiments.py`), and `epstopdf` for plots. To reproduce the experiments:
+```bash
+python3 experiments.py
+```
+
+List the points of a lattice of index `r` inside a cuboid:
+```python
+from latsieve import fibered_sieve, sieve_level
+box = [(-16, 16), (-16, 16), (-16, 16), (0, 16)]
+lam = [12345, 6789, 4242]
+print(sieve_level(box, 32003), len(fibered_sieve(32003, lam, box)))
+```
+
+Count the admissible points of a region precisely:
+```python
+from visibility import count_exact
+print(count_exact([(0, 0, 0), (1, 2, 1)], 200))
+```
+
+Validate a deficient region with exact rational arithmetic:
+```python
+from visibility import certify_deficit
+N, lo, hi, deficient = certify_deficit([(1, 2, 1)], 7)
+print(N, deficient)
+```
+
+
 ## Files and Contents
 
 * `latsieve.py` the sieving library:
@@ -62,40 +91,6 @@ This repository contains our implementation of research in precise relation coll
   * `results/e9_yield.txt` certified worst-case yields,
   * `results/e10_nodes.txt` enumeration nodes and the shape hypothesis.
 
-
-## 
-
-* 
-* 
-*  (optional; when it is absent the PDF figures are written directly)
-
-
-## Usage and Running
-The runtime of pipeline takes about fifteen minutes on one core laptop. The requirements are Python 3.9 or newer, `numpy` and `matplotlib` (needed only by `experiments.py`), and `epstopdf` for plots. To reproduce the experiments:
-```bash
-python3 experiments.py
-```
-
-List the points of a lattice of index `r` inside a cuboid:
-```python
-from latsieve import fibered_sieve, sieve_level
-box = [(-16, 16), (-16, 16), (-16, 16), (0, 16)]
-lam = [12345, 6789, 4242]
-print(sieve_level(box, 32003), len(fibered_sieve(32003, lam, box)))
-```
-
-Count the admissible points of a region precisely:
-```python
-from visibility import count_exact
-print(count_exact([(0, 0, 0), (1, 2, 1)], 200))
-```
-
-Validate a deficient region with exact rational arithmetic:
-```python
-from visibility import certify_deficit
-N, lo, hi, deficient = certify_deficit([(1, 2, 1)], 7)
-print(N, deficient)
-```
 
 ## Conventions
 
